@@ -1,0 +1,27 @@
+{
+	"large-desktop": {
+		"min": "1920px"
+	},
+	"desktop": {
+		"max": "1360px"
+	},
+	"small-desktop": {
+		"max": "1360px"
+	},
+	"tablet": {
+		"max": "1024px"
+	},
+	"md-tablet": {
+		"max": "860px",
+		"min": "769px"
+	},
+	"small-tablet": {
+		"max": "768px"
+	},
+	"mobile": {
+		"max": "768px"
+	},
+	"small-mobile": {
+		"max": "365px"
+	}
+}
