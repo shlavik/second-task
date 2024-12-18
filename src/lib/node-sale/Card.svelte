@@ -13,15 +13,15 @@
 </script>
 
 <div
-	class={`flex h-[400px] flex-col justify-between rounded-[20px] px-11 py-[52px] ${isNormal ? 'bg-white/5' : 'bg-accent'}`}
+	class={`flex h-[400px] flex-col justify-between rounded-[20px] px-11 py-[52px] mobile:h-[260px] mobile:p-9 mobile:pt-11 ${isNormal ? 'bg-white/5' : 'bg-accent'}`}
 >
 	<span
-		class={`text-darkness text-[99px] font-medium leading-[0.74] ${isNormal ? 'text-light' : 'text-darkness'}`}
+		class={`text-[99px] font-medium leading-[0.74] text-darkness mobile:text-[64px] ${isNormal ? 'text-light' : 'text-darkness'}`}
 	>
 		{value}
 	</span>
 	<span
-		class={`font-secondary text-[17px] font-light leading-[1.55] ${isNormal ? 'text-white/60' : 'text-dark'}`}
+		class={`font-secondary text-[17px] font-light leading-[1.55] mobile:text-[14px] ${isNormal ? 'text-white/60' : 'text-dark'}`}
 	>
 		{description}
 	</span>

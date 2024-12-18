@@ -1,11 +1,14 @@
 {
-	"large-desktop": {
+	"lg-desktop": {
 		"min": "1920px"
+	},
+	"md-desktop": {
+		"max": "1600px"
 	},
 	"desktop": {
 		"max": "1360px"
 	},
-	"small-desktop": {
+	"sm-desktop": {
 		"max": "1360px"
 	},
 	"tablet": {
@@ -15,13 +18,13 @@
 		"max": "860px",
 		"min": "769px"
 	},
-	"small-tablet": {
+	"sm-tablet": {
 		"max": "768px"
 	},
 	"mobile": {
 		"max": "768px"
 	},
-	"small-mobile": {
+	"sm-mobile": {
 		"max": "365px"
 	}
 }

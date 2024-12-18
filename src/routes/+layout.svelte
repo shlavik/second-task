@@ -17,6 +17,6 @@
 	</nav>
 </header>
 
-<main class="p-3">
+<main class="p-3 mobile:px-0">
 	{@render children()}
 </main>
