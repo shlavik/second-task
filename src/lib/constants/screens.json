@@ -9,7 +9,7 @@
 		"max": "1360px"
 	},
 	"sm-desktop": {
-		"max": "1360px"
+		"max": "1280px"
 	},
 	"tablet": {
 		"max": "1024px"
