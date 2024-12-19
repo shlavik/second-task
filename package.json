@@ -1,7 +1,7 @@
 {
 	"name": "second-task",
 	"private": true,
-	"version": "0.0.3",
+	"version": "0.0.6",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
@@ -27,5 +27,8 @@
 		"tailwindcss": "^3.4.16",
 		"typescript": "^5.7.2",
 		"vite": "^6.0.3"
+	},
+	"dependencies": {
+		"clsx": "^2.1.1"
 	}
 }

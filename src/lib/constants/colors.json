@@ -1,8 +1,26 @@
 {
 	"screen": "#0C0B0E",
-	"sale": "#1D1C22",
-	"accent": "#91F98C",
 	"light": "#F2F1F4",
-	"dark": "#3D3946",
-	"darkness": "#131216"
+	"accent": "#91F98C",
+	"sale-background": "#1D1C22",
+	"text": {
+		"dark": {
+			"bold": "#131216",
+			"thin": "#3D3946"
+		}
+	},
+	"button": {
+		"light": {
+			"base": "#F2EDFD",
+			"hover": "#E5DAFB",
+			"active": "#CFBAF8",
+			"text": "#0D0D0D"
+		},
+		"dark": {
+			"base": "#FFFFFF0D",
+			"hover": "#FFFFFF14",
+			"active": "#FFFFFF26",
+			"text": "#F2F1F4"
+		}
+	}
 }
