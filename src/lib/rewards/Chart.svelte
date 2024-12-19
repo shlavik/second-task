@@ -4,6 +4,12 @@
 
 	type ChartData = [string, number]
 
+	interface ChartProps {
+		class?: string
+	}
+
+	let { class: className = '' }: ChartProps = $props()
+
 	let days: number = $state(30)
 	let data: ChartData[] = $state([])
 
@@ -20,14 +26,14 @@
 	})
 </script>
 
-<div class="relative border-t-[2px] border-dashed border-white/10">
+<div class="relative border-t-[2px] border-dashed border-white/10 {className}">
 	<span
 		class="absolute top-3 font-secondary text-[13px] leading-[1.45] text-white/30"
 	>
 		Max 2000.00 $BLBX
 	</span>
 
-	<div class="flex h-[157px] flex-row items-end gap-[2px]">
+	<div class="flex h-[158px] flex-row items-end gap-[2px]">
 		{#each data as [_, value], index}
 			<div
 				class="flex-1 cursor-pointer rounded-[4px] bg-purple/40 hover:bg-purple"
