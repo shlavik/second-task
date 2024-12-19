@@ -2,24 +2,34 @@
 	import { clsx } from 'clsx'
 
 	type ButtonSize = 'small' | 'large'
-	type ButtonVariant = 'light' | 'dark'
+	type ButtonVariant = 'primary' | 'secondary' | 'transparent'
 
 	interface ButtonProps {
-		text?: string
 		variant?: ButtonVariant
 		size?: ButtonSize
+		text?: string
 		loading?: boolean
 		name?: string
 		disabled?: boolean
+		onClick?: (event: MouseEvent) => void
+		onMouseEnter?: (event: MouseEvent) => void
+		onMouseLeave?: (event: MouseEvent) => void
+		onFocus?: (event: FocusEvent) => void
+		onBlur?: (event: FocusEvent) => void
 	}
 
 	let {
-		text = 'Button',
-		variant = 'dark',
-		size = 'large',
+		text = '',
+		variant = 'secondary',
+		size = 'small',
 		loading = false,
 		name = '',
 		disabled = false,
+		onClick = undefined,
+		onMouseEnter = undefined,
+		onMouseLeave = undefined,
+		onFocus = undefined,
+		onBlur = undefined,
 	}: ButtonProps = $props()
 
 	const sizes: Record<ButtonSize, string> = {
@@ -31,22 +41,30 @@
 <button
 	class={clsx(
 		sizes[size],
-		'relative font-secondary font-medium',
-		'transition-colors',
-		'flex items-center justify-center gap-2',
-		variant === 'light' && [
+		'relative flex items-center justify-center gap-2 font-secondary transition-colors',
+		size === 'small' ? 'font-light' : 'font-medium',
+		variant === 'primary' && [
 			'bg-button-light-base text-button-light-text',
 			!disabled && 'hover:bg-button-light-hover active:bg-button-light-active',
-			,
 		],
-		variant === 'dark' && [
+		variant === 'secondary' && [
 			'bg-button-dark-base text-button-dark-text',
 			!disabled && 'hover:bg-button-dark-hover active:bg-button-dark-active',
+		],
+		variant === 'transparent' && [
+			'bg-button-transparent-base text-button-transparent-text',
+			!disabled &&
+				'hover:bg-button-transparent-hover active:bg-button-transparent-active',
 		],
 		disabled && 'cursor-not-allowed opacity-50',
 	)}
 	{name}
 	{disabled}
+	onclick={onClick}
+	onmouseenter={onMouseEnter}
+	onmouseleave={onMouseLeave}
+	onfocus={onFocus}
+	onblur={onBlur}
 >
 	{#if loading}
 		<div class="spinner relative h-6 w-6 animate-spin"></div>

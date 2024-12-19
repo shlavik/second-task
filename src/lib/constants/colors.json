@@ -1,8 +1,9 @@
 {
 	"screen": "#0C0B0E",
-	"light": "#F2F1F4",
-	"accent": "#91F98C",
 	"sale-background": "#1D1C22",
+	"light": "#F2F1F4",
+	"mint": "#91F98C",
+	"purple": "#7D42EC",
 	"text": {
 		"dark": {
 			"bold": "#131216",
@@ -21,6 +22,12 @@
 			"hover": "#FFFFFF14",
 			"active": "#FFFFFF26",
 			"text": "#F2F1F4"
+		},
+		"transparent": {
+			"base": "transparent",
+			"hover": "#FFFFFF0A",
+			"active": "#FFFFFF18",
+			"text": "#FFFFFF99"
 		}
 	}
 }
