@@ -1,9 +1,9 @@
 {
-	"screen": "#0C0B0E",
-	"sale-background": "#1D1C22",
 	"light": "#F2F1F4",
 	"mint": "#91F98C",
 	"purple": "#7D42EC",
+	"midnight": "#1D1C22",
+	"screen": "#0C0B0E",
 	"text": {
 		"dark": {
 			"bold": "#131216",
