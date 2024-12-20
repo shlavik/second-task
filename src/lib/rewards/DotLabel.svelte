@@ -4,12 +4,13 @@
 	interface DotLabelProps {
 		text: string
 		color: 'mint' | 'purple'
+		class?: string
 	}
 
-	let { text, color }: DotLabelProps = $props()
+	let { text, color, class: className = '' }: DotLabelProps = $props()
 </script>
 
-<div class="flex flex-row items-center gap-2">
+<div class="flex flex-row items-center gap-2 {className}">
 	<div
 		class={clsx(
 			'flex h-2 w-2 rounded-full',

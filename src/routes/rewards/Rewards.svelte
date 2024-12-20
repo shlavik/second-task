@@ -12,56 +12,32 @@
 	<h2 class="col-span-2 mb-10 text-[28px] font-medium">Rewards</h2>
 
 	<section
-		class="grid grid-cols-[auto_128px] grid-rows-[42px_28px_auto_auto] gap-4 rounded-[24px] bg-white/5 p-8 pb-8 pt-7"
+		class="grid grid-cols-[1fr_auto] grid-rows-[42px_28px_auto_auto] gap-4 rounded-[24px] bg-white/5 p-8 pb-8 pt-7"
 	>
 		<SubTitle>Last day, Nov 29</SubTitle>
-
 		<Balance balance={1820} />
-
 		<InfoLabel class="items-end" label="Nodes active" value="9/10" />
-
 		<InfoLabel label="Unlock" value="Feb 27, 2025" />
-
 		<InfoLabel label="Uptime" value="215 hr" />
-
 		<Chart class="col-span-2" />
 	</section>
 
-	<section class="rounded-[24px] bg-white/5 p-8 pt-7">
-		<div class="flex flex-col justify-between">
-			<SubTitle>Total distribution</SubTitle>
-
-			<div class="mb-4 pt-[4px]">
-				<span class="font-primary text-[22px] font-medium leading-[15px]">
-					20000.00
-				</span>
-				<span
-					class="self-end font-secondary text-[13px] font-light text-white/60"
-				>
-					$BLBX
-				</span>
-			</div>
-
-			<span
-				class="font-secondary text-[13px] font-light leading-[15px] text-white/60"
-			>
-				$6439.01
-			</span>
-		</div>
-
-		<ProgressBar />
-
-		<div class="mt-8 grid flex-1 grid-cols-2 grid-rows-[auto_auto_128px] gap-4">
-			<DotLabel text="Held" color="purple" />
-			<DotLabel text="Released" color="mint" />
-			<Balance balance={18200} />
-			<Balance balance={1800} />
-			<div class="self-end">
-				<Button text="Upcoming unlocks" size="large" />
-			</div>
-			<div class="self-end">
-				<Button text="Claim rewards" variant="primary" size="large" />
-			</div>
-		</div>
+	<section
+		class="grid grid-cols-[1fr_1fr] grid-rows-[73px_70px_32px_30px_auto_auto] overflow-hidden rounded-[24px] bg-white/5 p-8 pb-6 pt-7"
+	>
+		<SubTitle>Total distribution</SubTitle>
+		<Balance balance={20000} size="small" />
+		<ProgressBar class="col-span-2" />
+		<DotLabel class="self-start" text="Held" color="purple" />
+		<DotLabel class="ml-8 self-start" text="Released" color="mint" />
+		<Balance balance={18200} />
+		<Balance class="ml-8" balance={1800} />
+		<Button
+			class="w-fit self-end"
+			text="Upcoming unlocks"
+			variant="secondary"
+			size="large"
+		/>
+		<Button class="ml-8 w-fit self-end" text="Claim rewards" size="large" />
 	</section>
 </div>

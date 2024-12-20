@@ -2,13 +2,13 @@
 	import Button from '$lib/ui/Button.svelte'
 	import { subDays, formatISO } from 'date-fns'
 
-	type ChartData = [string, number]
-
 	interface ChartProps {
 		class?: string
 	}
 
 	let { class: className = '' }: ChartProps = $props()
+
+	type ChartData = [string, number]
 
 	let days: number = $state(30)
 	let data: ChartData[] = $state([])
@@ -28,7 +28,7 @@
 
 <div class="relative border-t-[2px] border-dashed border-white/10 {className}">
 	<span
-		class="absolute top-3 font-secondary text-[13px] leading-[1.45] text-white/30"
+		class="absolute top-3 font-secondary text-xs leading-[1.45] text-white/30"
 	>
 		Max 2000.00 $BLBX
 	</span>

@@ -11,6 +11,7 @@
 		loading?: boolean
 		name?: string
 		disabled?: boolean
+		class?: string
 		onClick?: (event: MouseEvent) => void
 		onMouseEnter?: (event: MouseEvent) => void
 		onMouseLeave?: (event: MouseEvent) => void
@@ -20,11 +21,12 @@
 
 	let {
 		text = '',
-		variant = 'secondary',
+		variant = 'primary',
 		size = 'small',
 		loading = false,
 		name = '',
 		disabled = false,
+		class: className = '',
 		onClick = undefined,
 		onMouseEnter = undefined,
 		onMouseLeave = undefined,
@@ -57,6 +59,7 @@
 				'hover:bg-button-transparent-hover active:bg-button-transparent-active',
 		],
 		disabled && 'cursor-not-allowed opacity-50',
+		className,
 	)}
 	{name}
 	{disabled}
